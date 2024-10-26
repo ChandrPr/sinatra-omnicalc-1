@@ -40,8 +40,7 @@ get("/payment/new") do
   erb(:payment_form)
 end
 
-
-get("/payment/result") do
+get("/payment/results") do
   @apr = params['apr'].to_f
   @years = params['years'].to_i
   @pv = params['pv'].to_f
@@ -53,3 +52,4 @@ get("/payment/result") do
   @payment = numerator / denominator
 
   erb(:payment_result)
+end
